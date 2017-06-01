@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Templates -->
+	<definition name="layout.basic" template="/WEB-INF/tiles/layout/basic.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/layout/header.jsp" />
+		<put-attribute name="left" value="/WEB-INF/tiles/layout/left.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/layout/footer.jsp" />
+	</definition>
+	
+	<!-- Pages -->  
+	<definition name="site.wfe.main" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/index.jsp" />
+	</definition>
+	
+	<definition name="site.wfe.import" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/import.jsp" />
+	</definition>
+	
+	<definition name="site.wfe.export" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/export.jsp" />
+	</definition>
+	
+</tiles-definitions>
+
+
+
