@@ -20,7 +20,6 @@ public class ExcelService {
 	
 	public void importXLSX(String fileDir) throws IOException{
 		
-		fileDir = "/Data/test.xlsx";
 		FileInputStream fis=new FileInputStream(fileDir);
 		XSSFWorkbook workbook=new XSSFWorkbook(fis);
 		int rowindex=0;

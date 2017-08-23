@@ -26,8 +26,17 @@ public class WebController {
 		
 		System.out.println("import excel file");
 		
+		String fileDir = "C:\test.xlsx";
+		String osType = System.getProperty("os.name").split(" ")[0];
+
+		if(osType == "Linux" || osType == "Mac"){
+			fileDir = "/Data/test.xlsx";
+		}else{
+			fileDir = "C:\\test.xlsx";
+		}
+		
 		try {
-			excelserv.importXLSX("test");
+			excelserv.importXLSX(fileDir);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
